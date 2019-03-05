@@ -418,7 +418,7 @@ func makeSmuxTransportOption(mplexExp bool) libp2p.Option {
 		ConnectionWriteTimeout: time.Second * 10,
 		KeepAliveInterval:      time.Second * 30,
 		EnableKeepAlive:        true,
-		MaxStreamWindowSize:    uint32(1024 * 512),
+		MaxStreamWindowSize:    uint32(1024 * 8192),
 		LogOutput:              ioutil.Discard,
 	}
 
